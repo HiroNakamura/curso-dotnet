@@ -9,9 +9,8 @@ Es un repositorio sobre el lenguaje de programación C#.
 
 **Contenido:**
 
-1. [Tipos de datos.] (https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter1)
+1. [Tipos de datos] (https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter1)
 
-[GitHub](http://github.com)
 
 2. Estructuras de control (if, if-else, switch, while, for, foreach, etc.).
 3. Estructuras de datos (Arrays, Listas, Mapas, etc.).
