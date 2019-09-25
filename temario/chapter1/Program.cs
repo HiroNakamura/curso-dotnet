@@ -12,13 +12,14 @@ namespace chapter1
             Parametros(args);
         }
         
-        static void Parametros(string[] params)
+        static void Parametros(string[] datos)
         {
-            if (params.Length > 0)
+            if (datos.Length > 0)
             {
-                foreach (string param in params)
+                Console.WriteLine("No. parametros: {0}",datos.Length);
+                foreach (string dato in datos)
                 {
-                    Console.WriteLine(param);
+                    Console.WriteLine("Hola: {0}",dato);
                 }
             }
             else
@@ -45,7 +46,7 @@ namespace chapter1
             ulong largo = 2333L;
             object obj = null;
             Object myObj = new Object();
-            cont string hola_mundo = "Ciao, mondo!!";
+            const string hola_mundo = "Ciao, mondo!!";
             var cliente = new string[]{"Carlos","Uribe","555-54-432"};
             Console.WriteLine("Tipos de datos:");
             Console.WriteLine("sbyte: {0}", sb);
