@@ -45,6 +45,8 @@ namespace chapter1
             ulong largo = 2333L;
             object obj = null;
             Object myObj = new Object();
+            cont string hola_mundo = "Ciao, mondo!!";
+            var cliente = new string[]{"Carlos","Uribe","555-54-432"};
             Console.WriteLine("Tipos de datos:");
             Console.WriteLine("sbyte: {0}", sb);
             Console.WriteLine("short: {0}", s);
@@ -62,6 +64,9 @@ namespace chapter1
             Console.WriteLine("char: {0}", car);
             Console.WriteLine("bool: {0}", verdadero);
             Console.WriteLine("MAX: {0}", MAX);
+            Console.WriteLine("hola_mundo: {0}",hola_mundo);
+            Console.WriteLine("Nombre: {0} {1}",cliente[0],cliente[1]);
+            Console.WriteLine("Telefono: {0}",cliente[2]);
         }
         
         
