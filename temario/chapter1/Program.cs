@@ -9,6 +9,22 @@ namespace chapter1
         static void Main(string[] args)
         {
             TiposDeDatos();
+            Parametros(args);
+        }
+        
+        static void Parametros(string[] params)
+        {
+            if (params.Length > 0)
+            {
+                foreach (string param in params)
+                {
+                    Console.WriteLine(param);
+                }
+            }
+            else
+            {
+                Console.WriteLine("No hay parametros!!!");
+            }
         }
         
         
