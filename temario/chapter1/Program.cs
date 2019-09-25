@@ -4,6 +4,8 @@ namespace chapter1
 {
     class Program
     {
+        public static readonly int MAX = 100;
+        
         static void Main(string[] args)
         {
             TiposDeDatos();
@@ -43,6 +45,7 @@ namespace chapter1
             Console.WriteLine("Object: {0}", myObj);
             Console.WriteLine("char: {0}", car);
             Console.WriteLine("bool: {0}", verdadero);
+            Console.WriteLine("MAX: {0}", MAX);
         }
         
         
