@@ -20,3 +20,11 @@ Es un repositorio sobre el lenguaje de programación C#.
 9. Manejo de tiempo.
 10. Otros.
 
+
+
+## Herramientas usadas
+- Visual Studio Code.
+- dotnet.
+- Nuget.
+- PostgreSQL.
+- Git.
