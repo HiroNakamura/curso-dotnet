@@ -11,6 +11,8 @@ namespace chapter2
         
         
         static bool OperaA(int x, int y) => x > y;
+
+        static string OperaB(string str1, string str2) => str1.Equals(str2)? "Son iguales: "+str1+" y "+str2 : "Son diferentes: "+str1+" y "+str2;
         
         static void SentenciasIf()
         {
@@ -58,6 +60,13 @@ namespace chapter2
                     break;
             }
             Console.WriteLine("{0}",card);
+
+            var nombresX = new string[]{"Juan","Miguel","Pedro","Hugo","Tomas","Julia","Omar","Oscar","Ricardo"};
+            var nombresY = new string[]{"John","Michael","Pedro","Huge","Tomas","Julian","Omar","Oscar","Richard"};
+            for(int c = 0; c < nombresY.Length; c++){
+                Console.WriteLine(OperaB(nombresX[c],nombresY[c]));
+            }
+
         }
     }
 }
