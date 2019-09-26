@@ -15,9 +15,53 @@ namespace chapter2
         static string OperaB(string str1, string str2) => str1.Equals(str2)? "Son iguales: "+str1+" y "+str2 : "Son diferentes: "+str1+" y "+str2;
         
         static bool OperaC(string str1, string str2) => str2.Equals(str1);
+
+        static bool OperaD(char entrada) => Char.IsDigit(entrada);
+
         static void SentenciasIf()
         {
             
+            var mi_char ='\u0065';
+            char caracter = (char) mi_char;
+            if(Char.IsLetter(caracter))
+            {
+                if(Char.IsLower(caracter))
+                {
+                    Console.WriteLine("El caracter {0} esta en minuscula.",caracter);
+                }
+                else
+                {
+                    Console.WriteLine("El caracter {0} esta en mayuscula.",caracter);
+                }
+            }
+            else
+            {
+                Console.WriteLine("El caracter {0}  no es aun caracter del alfabeto.",caracter);
+            }
+
+            char entra = '\u0111';
+            if(OperaD(entra) == true)
+            {
+                Console.WriteLine("{0} es un digito",entra);
+            }
+            else
+            {
+                Console.WriteLine("{0} no es un digito",entra);
+            }
+
+
+            entra = '6';
+            if(OperaD(entra) == true)
+            {
+                Console.WriteLine("{0} es un digito",entra);
+            }
+            else
+            {
+                Console.WriteLine("{0} no es un digito",entra);
+            }
+
+
+
             string your_name = "C Sharp";
             if(OperaC(your_name,"C#") == true)
             {
