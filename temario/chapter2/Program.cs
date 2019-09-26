@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace chapter2
 {
@@ -21,6 +22,15 @@ namespace chapter2
         static void SentenciasIf()
         {
             
+
+            int[] mis_numeros = { 0, 1, 2, 3, 4, 5 };
+            var limite = 3;
+            var consulta = from item in mis_numeros where item <= limite select item;
+            int cantidad = consulta.Count();
+            int dato = consulta.ElementAt(0);
+            Console.WriteLine("Limite: {0}, Consulta en 0:",limite,dato);
+            
+
             var mi_char ='\u0065';
             char caracter = (char) mi_char;
             if(Char.IsLetter(caracter))
