@@ -3,8 +3,6 @@
 
 ![Programador .NET](https://4.bp.blogspot.com/-IulVTT5Fk4Y/Usrqkn33JoI/AAAAAAAACBo/6FKoG1jUFGgOe3fGF4u6W2JCGCqICT5DQCPcBGAYYCw/s1600/progrNet.png)
 
-
-
 Es un repositorio sobre el lenguaje de programación C#.
 
 **Contenido:**
@@ -21,10 +19,20 @@ Es un repositorio sobre el lenguaje de programación C#.
 10. Otros.
 
 
-
 ## Herramientas usadas
 - Visual Studio Code.
 - dotnet.
 - Nuget.
 - PostgreSQL.
 - Git.
+
+## Crear proyecto
+
+
+```bash
+$ mkdir proyecto
+$ cd proyecto
+$ code .
+$ dotnet new console
+```
+
