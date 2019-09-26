@@ -18,15 +18,15 @@ namespace chapter2
             var numerosX = new int[] {32,41,54,67,78,83,99,102,150,210,235,363,674};
             var numerosY = new int[] {39,40,59,61,78,81,90,109,145,220,245,333,654};
             
-            for(var i = numeros.Length - 1; i >= 0; i--)
+            for(var i = numerosX.Length - 1; i >= 0; i--)
             {
                 if(OperaA(numerosX[i], numerosY[i]) == true)
                 {
-                    Console.WriteLine("{0} es mayor",numerosX[i]);
+                    Console.WriteLine("--> X: {0} es mayor",numerosX[i]);
                 }
                 else
                 {
-                    Console.WriteLine("{0} es mayor",numerosY[i]);
+                    Console.WriteLine("--> Y: {0} es mayor",numerosY[i]);
                 }
                     
             }
@@ -57,6 +57,7 @@ namespace chapter2
                     card = "Gimel";
                     break;
             }
+            Console.WriteLine("{0}",card);
         }
     }
 }
