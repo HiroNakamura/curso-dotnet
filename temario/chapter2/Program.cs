@@ -14,9 +14,20 @@ namespace chapter2
 
         static string OperaB(string str1, string str2) => str1.Equals(str2)? "Son iguales: "+str1+" y "+str2 : "Son diferentes: "+str1+" y "+str2;
         
+        static bool OperaC(string str1, string str2) => str2.Equals(str1);
         static void SentenciasIf()
         {
             
+            string your_name = "C Sharp";
+            if(OperaC(your_name,"C#") == true)
+            {
+                Console.WriteLine("{0} y C#  son iguales!!",your_name);
+            }
+            else
+            {
+                Console.WriteLine("{0} y C#  no son iguales!!",your_name);   
+            }
+
             var numerosX = new int[] {32,41,54,67,78,83,99,102,150,210,235,363,674};
             var numerosY = new int[] {39,40,59,61,78,81,90,109,145,220,245,333,654};
             
