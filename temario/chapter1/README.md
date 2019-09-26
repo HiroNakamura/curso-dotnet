@@ -13,7 +13,7 @@
 | ulong | De 0 a 18.446.744.073.709.551.615  |  Entero de 64 bits sin signo |  System.UInt64 | 0  |
 | float  |  De ±1,5 x 10-45 a ±3,4 x 1038 | 7 dígitos  |  System.Single | 0.0f  |
 | double | De ±5,0 × 10−324 a ±1,7 × 10308  | 15-16 dígitos  | System.Double  |  0.0d |
-| decimal  | De ±1,0 x 10-28 to ±7,9228 x 1028   |  28-29 dígitos significativos |  System.Decima | 0m  |
+| decimal  | De ±1,0 x 10-28 to ±7,9228 x 1028   |  28-29 dígitos significativos |  System.Decimal | 0m  |
 | char | U+0000 a U+FFFF  |  Carácter Unicode de 16 bits | System.Char  | \x0000  |
 | bool  | Booleano  | true o false  | System.Boolean  |  false |
 
