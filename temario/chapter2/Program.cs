@@ -48,7 +48,8 @@ namespace chapter2
             
             int opc = 1;
             string card="";
-            switch(opc){
+            switch(opc)
+            {
                 case 1:
                     card = "Aleph";
                     break;
@@ -63,8 +64,69 @@ namespace chapter2
 
             var nombresX = new string[]{"Juan","Miguel","Pedro","Hugo","Tomas","Julia","Omar","Oscar","Ricardo"};
             var nombresY = new string[]{"John","Michael","Pedro","Huge","Tomas","Julian","Omar","Oscar","Richard"};
-            for(int c = 0; c < nombresY.Length; c++){
+            for(int c = 0; c < nombresY.Length; c++)
+            {
                 Console.WriteLine(OperaB(nombresX[c],nombresY[c]));
+            }
+
+            int a = 23;
+            int b = 21;
+            if(a > b)
+            {
+                Console.WriteLine("{0} es mayor a {1}",a,b);
+            }
+            else if(b > a)
+            {
+                Console.WriteLine("{0} es mayor a {1}",b,a);
+            }
+            else
+            {
+                Console.WriteLine("{0} y {1} son iguales",a,b);
+            }
+
+            a = 4;
+            b = 10;
+            if(OperaA(a,b))
+            {
+                Console.WriteLine("{0} es mayor a {1}",a,b);
+            }
+            else if(OperaA(b,a))
+            {
+                Console.WriteLine("{0} es mayor a {1}",b,a);
+            }
+            else
+            {
+                Console.WriteLine("{0} y {1} son iguales",a,b);
+            }
+
+            a = 33;
+            b = 33;
+            if(OperaA(a,b))
+            {
+                Console.WriteLine("{0} es mayor a {1}",a,b);
+            }
+            else if(OperaA(b,a))
+            {
+                Console.WriteLine("{0} es mayor a {1}",b,a);
+            }
+            else
+            {
+                Console.WriteLine("{0} y {1} son iguales",a,b);
+            }
+
+            a = 101;
+            b = 99;
+            if(OperaA(a,100) == true)
+            {
+                Console.WriteLine("{0} es mayor a 100",a);
+                if(OperaA(b,90) == true)
+                {
+                    Console.WriteLine("{0} es mayor a 90",b);
+                }
+                else
+                {
+                    Console.WriteLine("{0} es menor a 90",b);
+                }
             }
 
         }
