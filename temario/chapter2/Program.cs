@@ -22,7 +22,6 @@ namespace chapter2
         static void SentenciasIf()
         {
             
-
             int[] mis_numeros = { 0, 1, 2, 3, 4, 5 };
             var limite = 3;
             var consulta = from item in mis_numeros where item <= limite select item;
@@ -69,8 +68,6 @@ namespace chapter2
             {
                 Console.WriteLine("{0} no es un digito",entra);
             }
-
-
 
             string your_name = "C Sharp";
             if(OperaC(your_name,"C#") == true)
