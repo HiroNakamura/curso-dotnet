@@ -5,9 +5,11 @@ namespace chapter2
 {
     class Program
     {
+        public static readonly int MAX = 100;
         static void Main(string[] args)
         {
             SentenciasIf();
+            SentenciasFor();
         }
         
         
@@ -19,6 +21,16 @@ namespace chapter2
 
         static bool OperaD(char entrada) => Char.IsDigit(entrada);
 
+
+        static void SentenciasFor()
+        {
+
+            int contador = 0; 
+            for (; contador < MAX; Console.WriteLine("Contador:" + contador++)) 
+            { }
+
+
+        }
         static void SentenciasIf()
         {
             
@@ -197,6 +209,14 @@ namespace chapter2
             }else
             {
                 Console.WriteLine("2. Hoy es {0}",dateTime);
+            }
+
+            char opcion = 'x';
+            switch (opcion)
+            {
+                case 'x': Console.WriteLine("Elegiste x"); break;
+                case '\u0099': Console.WriteLine("Elegiste \u0099"); break;
+                default: Console.WriteLine("Elegiste \u0049"); break;
             }
 
         }

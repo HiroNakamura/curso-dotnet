@@ -10,6 +10,17 @@ namespace chapter3
             MockTestA();
         }
 
+       static Dictionary<int, string> GetDiccionario()
+       {
+           Dictionary<int, string> diccionario = new Dictionary<int, string>();
+           diccionario.Add(0, "Los dolientes");
+           diccionario.Add(1, "En busca de Klingsor");
+           diccionario.Add(2, "Cain");
+           diccionario.Add(3, "El evangelio segun JesusCristo");
+           diccionario.Add(4, "La tabla de Flandes");
+           return diccionario;
+       }
+        
 
         static bool CumpleCriterio(int item)
         {
@@ -18,6 +29,16 @@ namespace chapter3
                 resultado = true;
             }
             return resultado;
+        }
+
+
+        static void RecorrerDiccionarios()
+        {
+            Console.WriteLine("Recorrer diccionarios:");
+            foreach (var item in GetDiccionario())
+            {
+                Console.WriteLine("{0} : {1}", item.Key, item.Value);
+            }
         }
 
         static void RecorrerListaInt(List<int> lista)
@@ -62,6 +83,7 @@ namespace chapter3
             List<int> listaNumeros = new List<int>(new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 , 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20});
             RecorrerListaInt(listaNumeros);
             RecorrerListaIntInversa(listaNumeros);
+            RecorrerDiccionarios();
         }
 
     }
