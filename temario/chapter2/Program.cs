@@ -194,6 +194,14 @@ namespace chapter2
                 }
             }
 
+            DateTime dateTime = new DateTime(2019, 9, 26);
+            if(DateTime.Today == dateTime ){
+                Console.WriteLine("1. Hoy es {0}",dateTime);
+            }else
+            {
+                Console.WriteLine("2. Hoy es {0}",dateTime);
+            }
+
         }
     }
 }
