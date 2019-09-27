@@ -175,8 +175,6 @@ namespace chapter3
                 Console.WriteLine("Hola, amigos !!!");
             }
 
-
-
         }
 
         static void MockTestA()
