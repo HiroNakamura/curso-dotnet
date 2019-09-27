@@ -10,6 +10,32 @@ namespace chapter1
         {
             TiposDeDatos();
             Parametros(args);
+
+            Console.WriteLine("\t*** Datos ***\n");
+            char c = '\u2003';
+            GetTipos(c);
+            bool verdadero = false;
+            GetTipos(verdadero);
+            object myObj = new Object();
+            GetTipos(myObj);
+            var numerosInt = new int[]{1,2,3};
+            GetTipos(numerosInt);
+            string producto = "Nintendo Premium";
+            GetTipos(producto);
+            float flotanteNum = 34.2f;
+            GetTipos(flotanteNum);
+            Program myProg = new Program();
+            GetTipos(myProg);
+            Int32 entero32 = default(Int32);
+            GetTipos(entero32);
+            DateTime hoy = DateTime.Today;
+            GetTipos(hoy);
+        }
+
+        static void GetTipos(object dato)
+        {
+            Console.WriteLine("Dato: {0}",dato);
+            Console.WriteLine("Tipo: {0}",dato.GetType());
         }
         
         static void Parametros(string[] datos)
@@ -31,6 +57,7 @@ namespace chapter1
         
         static void TiposDeDatos()
         {
+            DateTime dateTime = new DateTime(2019, 9, 24);
             byte b = 12;
             char car = '\u1002';
             bool verdadero = 13 > 2;
@@ -68,6 +95,8 @@ namespace chapter1
             Console.WriteLine("hola_mundo: {0}",hola_mundo);
             Console.WriteLine("Nombre: {0} {1}",cliente[0],cliente[1]);
             Console.WriteLine("Telefono: {0}",cliente[2]);
+            Console.WriteLine("DateTime: {0}",dateTime);
+            Console.WriteLine(DateTime.Today);
         }
         
         
