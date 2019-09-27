@@ -19,3 +19,16 @@
 
 
 [Tipos de datos integrados](http://joffremoncayo.com/blog/2018/10/03/tipos-de-datos-integrados-en-csharp/)
+
+
+## Ejemplos de tipo de datos
+
+```c
+var entero = System.Int32;
+var defecto = default(entero); 
+object objeto = null;
+long llave = 12000L;
+char caracter = '\u99877';
+```
+
+
