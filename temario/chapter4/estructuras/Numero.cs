@@ -2,15 +2,10 @@ namespace estructuras
 {
     struct Numero
     {
-
-        public Numero(){}
-
         public Numero(int valor, string nombre){
             Valor = valor;
             Nombre = nombre;
         }
-
-        ~Numero(){}
         
         public int Valor
         {

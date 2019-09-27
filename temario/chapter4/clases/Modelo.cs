@@ -25,5 +25,10 @@ namespace clases
         {
             return "Modelo{nombre = "+Nombre+"}";
         }
+
+        public virtual void Mostrar()
+        {
+            Console.WriteLine(GetModelo());
+        }
     }
 }
