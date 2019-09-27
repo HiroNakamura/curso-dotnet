@@ -8,6 +8,7 @@ namespace chapter3
         static void Main(string[] args)
         {
             MockTestA();
+            MockTestB();
         }
 
        static Dictionary<int, string> GetDiccionario()
@@ -93,6 +94,15 @@ namespace chapter3
                     }
                 }
             }
+
+            lista.Add(21);
+            lista.Add(22);
+            Console.WriteLine();
+            foreach(var numero in lista)
+            {
+                Console.WriteLine("Hola no. {0}",numero);
+            }
+
         }
 
         static void RecorrerListaIntInversa(List<int> lista)
@@ -111,6 +121,62 @@ namespace chapter3
                     Console.WriteLine(":"+ex.Message);
                 }
            }
+        }
+
+        static Stack<string> GetSatck()
+        {
+            Stack<string> nombresStack = new Stack<string>();
+            nombresStack.Push("Ernesto");
+            nombresStack.Push("Gimena");
+            nombresStack.Push("Ernesto");
+            nombresStack.Push("Gimena");
+            nombresStack.Push("Ernesto");
+            return nombresStack;
+        }
+
+        static void MockTestB()
+        {
+            var miStack = GetSatck();
+            Console.WriteLine("\nRecorriendo Stack:");
+            var lleno = miStack.Count>0? "Stack lleno" : "Stack vacio";
+            Console.WriteLine("{0}",lleno);
+            foreach(var item in miStack)
+            {
+                Console.WriteLine("{0}",item);
+            }
+            miStack.Pop();
+            miStack.Pop();
+            miStack.Pop();
+            Console.WriteLine();
+            foreach(var item in miStack)
+            {
+                Console.WriteLine("{0}",item);
+            }
+            Console.WriteLine("Limpiando todo el Stack:");
+            miStack.Clear();
+            string vacio = miStack.Count>0? "El stack esta lleno" : "El stack no esta lleno";
+            miStack.Push("Tomas");
+            miStack.Push("Sergio");
+            miStack.Push("Luisa Gimena");
+            miStack.Push("Tania");
+            foreach(var item in miStack)
+            {
+                Console.WriteLine("{0}",item);
+            }
+
+            var existeGimena = miStack.Contains("Luisa Gimena");
+            if(existeGimena == true)
+            {
+                Console.WriteLine("Hola Luisa Gimena !!!");
+            }
+
+            if(miStack.Contains("Tomas") || miStack.Contains("Tomasina"))
+            {
+                Console.WriteLine("Hola, amigos !!!");
+            }
+
+
+
         }
 
         static void MockTestA()
