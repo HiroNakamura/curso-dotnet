@@ -10,6 +10,7 @@ namespace chapter2
         {
             SentenciasIf();
             SentenciasFor();
+            SentenciasWhile();
         }
         
         
@@ -28,8 +29,19 @@ namespace chapter2
             int contador = 0; 
             for (; contador < MAX; Console.WriteLine("Contador:" + contador++)) 
             { }
+        }
 
-
+        static void SentenciasWhile()
+        {
+            int cont = 0;
+            Console.WriteLine("Ciclo while:");
+            while(cont++ < MAX)
+            {
+                if(cont%4==0)
+                {
+                    Console.WriteLine("Cumple la condicion: {0}",cont);
+                }
+            }
         }
         static void SentenciasIf()
         {

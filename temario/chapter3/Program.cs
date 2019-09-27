@@ -18,6 +18,7 @@ namespace chapter3
            diccionario.Add(2, "Cain");
            diccionario.Add(3, "El evangelio segun JesusCristo");
            diccionario.Add(4, "La tabla de Flandes");
+           diccionario.Add(5, "Adios a Dylan");
            return diccionario;
        }
         
@@ -35,9 +36,25 @@ namespace chapter3
         static void RecorrerDiccionarios()
         {
             Console.WriteLine("Recorrer diccionarios:");
-            foreach (var item in GetDiccionario())
+            if(GetDiccionario().Count > 0){
+                Console.WriteLine("Diccionario lleno!!");
+                foreach (var item in GetDiccionario())
+                {
+                    Console.WriteLine("{0} : {1}", item.Key, item.Value);
+                }
+            }
+            var miDiccionario = GetDiccionario();
+            var valores = miDiccionario.Values;
+            var llaves = miDiccionario.Keys;
+            Console.WriteLine("Llaves:");
+            foreach(var llave in llaves)
             {
-                Console.WriteLine("{0} : {1}", item.Key, item.Value);
+                Console.WriteLine("Llave: {0}",llave);
+            }
+            Console.WriteLine("Valores:");
+            foreach(var valor in valores)
+            {
+                Console.WriteLine("Valor: {0}",valor);
             }
         }
 
