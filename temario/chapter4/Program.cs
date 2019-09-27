@@ -15,7 +15,7 @@ namespace chapter4
 
         static void MockTestA()
         {
-            Console.WriteLine("Clases en C#");
+            Console.WriteLine("*** Clases en C# ***");
             Modelo modeloA = new Modelo();
             modeloA.Nombre = "MJ45-3321";
             Modelo modeloB = new Modelo("MX23-2100");
@@ -30,6 +30,17 @@ namespace chapter4
             modeloB.Mostrar();
             modelos[2].Mostrar();
 
+            string iguales = "";
+            if(modeloB.Equals(modeloA)){
+                iguales = modeloB.GetType() 
+                +" A es igual a "
+                +modeloA.GetType()+ " B ";
+            }else{
+                iguales = modeloB.GetType() 
+                +" A no es igual a "
+                +modeloA.GetType()+" B ";
+            }
+            Console.WriteLine("{0}",iguales);
 
             Dictionary<int,Modelo> mapaModelo = new Dictionary<int, Modelo>();
             mapaModelo.Add(1,modeloA);
@@ -41,6 +52,30 @@ namespace chapter4
                 Console.WriteLine("{0} : {1}", articulo.Key, articulo.Value);
             }
 
+            if (mapaModelo.ContainsKey(2))
+            {
+                Console.WriteLine("Contiene la llave 2");
+            }
+
+            if(mapaModelo.ContainsValue(modeloA))
+            {
+                Console.WriteLine("Contiene modeloA.Nombre: MJ45-3321");   
+            }
+
+            var tipoMapaModelo = mapaModelo.GetType();
+            Console.WriteLine("Tipo: {0}",tipoMapaModelo);
+
+            var tipoModelo = modeloA.GetType();
+            Console.WriteLine("Tipo: {0}",tipoModelo);
+
+            Numero myNumA = new Numero(1,"Uno");
+            Console.WriteLine("{0}",myNumA.GetNumero());
+            myNumA.Valor=2;
+            myNumA.Nombre="Dos";
+            Console.WriteLine("{0}",myNumA.GetNumero());
+
+            var tipoNum = myNumA.GetType();
+            Console.WriteLine("Tipo: {0}",tipoNum);
 
 
         }
