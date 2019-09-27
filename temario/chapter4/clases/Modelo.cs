@@ -9,11 +9,21 @@ namespace clases
         {
             Console.WriteLine("Objeto Modelo creado e inicializado");
         }
+
+        public Modelo(string nombre)
+        {
+            Nombre = nombre;
+        }
         ~Modelo(){}
 
         public string Nombre
         {
             get;set;
+        }
+
+        public string GetModelo()
+        {
+            return "Modelo{nombre = "+Nombre+"}";
         }
     }
 }
