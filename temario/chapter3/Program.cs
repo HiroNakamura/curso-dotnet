@@ -56,6 +56,24 @@ namespace chapter3
             {
                 Console.WriteLine("Valor: {0}",valor);
             }
+
+            Console.WriteLine();
+            var itemEliminado= 4;
+            miDiccionario.Remove(itemEliminado);
+            foreach (var item in miDiccionario)
+            {
+                Console.WriteLine("{0} : {1}", item.Key, item.Value);
+            }
+
+            Console.WriteLine();
+            miDiccionario.TryAdd(6,"El Kybalion");
+            miDiccionario.TryAdd(7,"Ciudades Intraterrenas");
+            miDiccionario.TryAdd(8,"El Club Dumas");
+            foreach (var item in miDiccionario)
+            {
+                Console.WriteLine("{0} : {1}", item.Key, item.Value);
+            }
+
         }
 
         static void RecorrerListaInt(List<int> lista)
