@@ -41,16 +41,20 @@ namespace chapter3
 
         static void RecorrerListaIntInversa(List<int> lista)
         {
-            try
-            {
-                for(int i=lista.Count ; i > 0 ; i--)
+           if(lista.Count > 0)
+           {
+               Console.WriteLine("Lista llena");
+               try
+               {
+                   for(int i=lista.Count ; i > 0 ; i--)
+                   {
+                       Console.WriteLine("Hola no. {0}",lista[i]);
+                    }
+                }catch(Exception ex)
                 {
-                    Console.WriteLine("Hola no. {0}",lista[i]);
+                    Console.WriteLine(":"+ex.Message);
                 }
-            }catch(Exception ex)
-            {
-                Console.WriteLine(":"+ex.Message);
-            }
+           }
         }
 
         static void MockTestA()
