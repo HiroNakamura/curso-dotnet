@@ -36,3 +36,11 @@ $ code .
 $ dotnet new console
 ```
 
+
+## Ejecutar proyecto
+
+
+```bash
+$ dotnet run
+```
+
