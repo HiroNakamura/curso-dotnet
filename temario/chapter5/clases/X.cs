@@ -23,7 +23,7 @@ namespace clases
 
         public override string ToString()
         {
-            return String.Format("X{ version = {0} }",Version);
+            return String.Format("X::version = {0} ",Version);
         }
     }
 }
