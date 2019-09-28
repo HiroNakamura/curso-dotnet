@@ -5,9 +5,10 @@ La POO es un paradigma de programación en la que se trabaja con objetos y clase
 
 ## Partes fundamentales de la POO
 
-1. Herencia.
-2. Polimorfismo.
-3. Abstracción.
+1. Encapsulación.
+2. Herencia.
+3. Polimorfismo.
+4. Abstracción.
 
 
 ## Ejemplo de clase
@@ -39,6 +40,7 @@ class Modelo
     }
 ```
 
+**Ejemplo de instanciación**
 
 ```java
 //Instanciar una clase de manera tradicional
@@ -46,3 +48,42 @@ Modelo myModelo = new Modelo();
 //Usando var
 var otroModelo = new Modelo();
 ```
+
+**Ejemplo de herencia**
+
+```java
+class Modelo
+{
+
+}
+
+class SuperModelo: Modelo
+{
+
+}
+
+```
+
+**Ejemplo de uso (implementación) de interfaces**
+
+```java
+interface IServicio
+{
+   void Saludar();
+}
+
+class ServicioImpl: IServicio
+{
+   public void Saludar()
+   {
+      //...
+   }
+}
+
+
+```
+
+
+
+
+
