@@ -33,7 +33,22 @@ namespace chapter4
             servicioDImpl.GetModelo = modelo;
             servicioDImpl.Datos();
             Console.WriteLine("55+8 = {0}",servicioDImpl.Operacion(55,8));
-                        
+            
+            const int TAM = 4;
+            var myNumeroX = new Numero(11,"FELIX");
+            var myNumeroY = new Numero(17,"BILL");
+            Numero[] mysNumeros = new Numero[TAM];
+            mysNumeros[0] = myNumeroX;
+            mysNumeros[1] = myNumeroY;
+            mysNumeros[2] = new Numero(25,"FOXY");
+            mysNumeros[3] = new Numero(12,"TOM");
+
+            var cnt = TAM;
+            while(cnt-- >0)
+            {
+                Console.WriteLine("{0}",mysNumeros[cnt].GetNumero());
+            }
+
         }
 
         static void MockTestA()
