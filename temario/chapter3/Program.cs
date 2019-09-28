@@ -15,9 +15,25 @@ namespace chapter3
         static void MockTestC()
         {
             LinkedList<float> lista = new LinkedList<float>();
+            lista.AddFirst(5.2f);
             lista.AddLast(6.0f);
-            
+            foreach(var elemento in lista)
+            {
+                Console.WriteLine("{0}",elemento);
+            }
+
+            Console.WriteLine();
             HashSet<int> myHashSet = new HashSet<int>();
+            myHashSet.Add(34);
+            myHashSet.Add(35);
+            myHashSet.Add(36);
+            foreach(var itemHash in myHashSet)
+            {
+                Console.WriteLine("{0}",itemHash);
+            }
+
+            
+
         }
 
        static Dictionary<int, string> GetDiccionario()
