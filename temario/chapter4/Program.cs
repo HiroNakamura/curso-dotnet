@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using clases;
 using estructuras;
-
+using interfaces;
 
 namespace chapter4
 {
@@ -28,6 +28,12 @@ namespace chapter4
             ContenedorC contenedor = new ContenedorC(servicio);
             contenedor.Saludar();
 
+            ServicioDImpl servicioDImpl = new ServicioDImpl();
+            var modelo = new Modelo("El general Urchate");
+            servicioDImpl.GetModelo = modelo;
+            servicioDImpl.Datos();
+            Console.WriteLine("55+8 = {0}",servicioDImpl.Operacion(55,8));
+                        
         }
 
         static void MockTestA()

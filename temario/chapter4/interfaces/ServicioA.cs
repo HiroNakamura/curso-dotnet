@@ -1,5 +1,5 @@
 namespace interfaces{
-    interface ServicioA
+    public interface ServicioA
     {
         decimal Operacion(int a, int b);
     }

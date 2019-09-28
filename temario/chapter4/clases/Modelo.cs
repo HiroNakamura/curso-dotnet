@@ -3,7 +3,7 @@ using System;
 
 namespace clases
 {
-    class Modelo
+    public class Modelo
     {
         public Modelo()
         {

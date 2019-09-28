@@ -2,8 +2,8 @@ using clases;
 
 namespace interfaces
 {
-   interface Servicio: ServicioA
+   public interface ServicioD: ServicioA
    {
-        void Datos(Modelo modelo);
+        void Datos();
    }
 }

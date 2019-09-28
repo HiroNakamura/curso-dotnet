@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace clases
 {
-    class SuperModelo:Modelo
+    public class SuperModelo:Modelo
     {
         public SuperModelo()
         {
