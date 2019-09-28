@@ -1,14 +1,25 @@
 # Estructuras de control en C#
 
 
-1. Secuenciales.
-2. Condicionales.
-3. Iterativas.
+1. Secuenciales o Top-down.
+2. Condicionales o Selectivas.
+3. Iterativas o Repetitivas.
 
 
-## Top-down
+## Top-down (secuenciales)
 
 De arriba hacia abajo.
+
+```java
+Console.WriteLine("Presiona una tecla:");
+Console.ReadLine();
+
+int operacion = 34 +41;
+var verdadero = 34 > 1000;//false
+bool falso = 100 > 99 || 0<2;
+char caracter = '\u1109';
+bool esDigito = Char.IsDigit(caracter);
+```
 
 
 ## Condicionales (if, if-else, if-else if-else)
@@ -82,6 +93,12 @@ const int MAX = 100;
 while(contador++ < MAX)
 {
    Console.WriteLine("{0}",contador);
+}
+
+int cont = lista.Count;
+while(cont-- > 0)
+{
+  Console.WriteLine("{0}",lista[cont]);
 }
 
 ```
