@@ -21,14 +21,25 @@
 [Tipos de datos integrados](http://joffremoncayo.com/blog/2018/10/03/tipos-de-datos-integrados-en-csharp/)
 
 
+|Tipo C# 	|Descripción 	|Tipo .NET|
+|---|---|---|
+|object |	Es la clase base para todos los demás tipos, incluidos los tipos integrados simples.| 	System.Object|
+|string| 	Una secuencia de caracteres Unicode. 	|System.String|
+|dynamic |	Es un tipo diseñado para ser usado con assemblies escritos en lenguajes dinámicos| 	No corresponde a un tipo .NET|
+
+
+
 ## Ejemplos de tipo de datos
 
-```c
+```java
 var entero = System.Int32;
 var defecto = default(entero); 
 object objeto = null;
 long llave = 12000L;
 char caracter = '\u99877';
+Modelo modelo = new Modelo();
+var str = "juan".ToUpper();
+
 ```
 
 
