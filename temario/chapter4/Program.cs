@@ -20,6 +20,14 @@ namespace chapter4
             servicioAImpl.X = 32;
             servicioAImpl.Y = 1;
             servicioAImpl.Mostrar();
+
+            ServicioAImpl otroServicioAImpl = new ServicioAImpl(6,43);
+            otroServicioAImpl.Mostrar();
+
+            ServicioCImpl servicio = new ServicioCImpl();
+            ContenedorC contenedor = new ContenedorC(servicio);
+            contenedor.Saludar();
+
         }
 
         static void MockTestA()
