@@ -11,6 +11,15 @@ namespace chapter4
         static void Main(string[] args)
         {
             MockTestA();
+            MockTestB();
+        }
+
+        static void MockTestB()
+        {
+            var servicioAImpl = new ServicioAImpl();
+            servicioAImpl.X = 32;
+            servicioAImpl.Y = 1;
+            servicioAImpl.Mostrar();
         }
 
         static void MockTestA()
@@ -77,7 +86,15 @@ namespace chapter4
             var tipoNum = myNumA.GetType();
             Console.WriteLine("Tipo: {0}",tipoNum);
 
-
+            SuperModelo superModelo = new SuperModelo();
+            superModelo.Nombre = "Super Modelo";
+            List<string> telefonos = new List<string>();
+            telefonos.Add("7221339090");
+            telefonos.Add("7221009030");
+            telefonos.Add("7221222580");
+            telefonos.Add("7221013232");
+            superModelo.GetLista = telefonos;
+            superModelo.Mostrar();
         }
     }
 }
