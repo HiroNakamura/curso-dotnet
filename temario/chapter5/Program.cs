@@ -6,7 +6,12 @@ namespace chapter5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MockTestA();
+        }
+
+        static void MockTestA()
+        {
+            
         }
     }
 }
