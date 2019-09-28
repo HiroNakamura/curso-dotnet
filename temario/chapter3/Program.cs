@@ -9,6 +9,15 @@ namespace chapter3
         {
             MockTestA();
             MockTestB();
+            MockTestC();
+        }
+        
+        static void MockTestC()
+        {
+            LinkedList<float> lista = new LinkedList<float>();
+            lista.AddLast(6.0f);
+            
+            HashSet<int> myHashSet = new HashSet<int>();
         }
 
        static Dictionary<int, string> GetDiccionario()
