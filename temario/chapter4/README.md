@@ -16,6 +16,8 @@ La POO es un paradigma de programación en la que se trabaja con objetos y clase
 **Modelo.cs**
 
 ```c
+using System;
+
 class Modelo
     {
         public Modelo()
@@ -35,4 +37,12 @@ class Modelo
             get;set;
         }
     }
+```
+
+
+```
+//Instanciar una clase de manera tradicional
+Modelo myModelo = new Modelo();
+//Usando var
+var otroModelo = new Modelo();
 ```
