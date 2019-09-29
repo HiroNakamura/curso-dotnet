@@ -40,16 +40,16 @@ namespace chapter5
             }
 
             CalculoImpl calculoImpl = new CalculoImpl();
-            var enteros = new int[]{45,55,56,76,88,90,101,109,210,321,333,432,540};
+            var enteros = new int[]{3,12,21,25,28,32,36,45,55,56,76,88,90,101,109,210,321,333,432,540};
             foreach(var entero in enteros)
             {
-                if(calculoImpl.EsPar(entero))
+                if(calculoImpl.EsPar(entero) == true)
                 {
                     Console.WriteLine("Cumple la condicion: {0}",entero);
                 }
             }
 
-            
+
         }
     }
 }
