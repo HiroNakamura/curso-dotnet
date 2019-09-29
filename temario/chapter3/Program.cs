@@ -54,6 +54,26 @@ namespace chapter3
                 Console.WriteLine("Ese cafe esta en vias de no existir");break;
             }
 
+            var programador = Programador.SENIOR;
+            switch(programador)
+            {
+                case "JUNIOR":
+                Console.WriteLine("Programador {0}",programador);
+                break;
+                case "MID_LEVEL":
+                Console.WriteLine("Programador {0}",programador);
+                break;
+                case "SENIOR":
+                Console.WriteLine("Programador {0}",programador);
+                break;
+                case "MASTER":
+                Console.WriteLine("Programador {0}",programador);
+                break;
+                default:
+                Console.WriteLine("Programador {0}",programador);
+                break;
+            }
+
         }
 
        static Dictionary<int, string> GetDiccionario()
