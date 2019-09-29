@@ -25,7 +25,8 @@ Una **excepción** es una anomalía en el flujo normal de un programa. Un **erro
 
 ```java
 
-object tipo = "333".GetType();
+var dato = null;
+object tipo = dato.GetType();
 
 try
 {
@@ -35,5 +36,18 @@ catch(Exception ex)
 {
    Console.WriteLine("Error = {0}",ex.Message);
 }
+
+
+try
+{
+  Console.WriteLine("Hola");
+}
+finally
+{
+  Console.WriteLine("Good bye!!");
+}
+
+
+
 
 ```
