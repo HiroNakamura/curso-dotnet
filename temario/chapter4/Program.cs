@@ -20,6 +20,11 @@ namespace chapter4
             Oviparo perdigi = new Oviparo("Esteban");
             Console.WriteLine();
             Canario canario = new Canario("Ernesto");
+            Console.WriteLine();
+            Oviparo canarito = new Canario("Juanito");
+            Console.WriteLine();
+            var genarito = new Canario("Genarito");
+            
         }
 
         static void MockTestB()
