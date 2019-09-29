@@ -11,6 +11,15 @@ La POO es un paradigma de programación en la que se trabaja con objetos y clase
 4. Abstracción.
 
 
+|Concepto|Definición|
+|---|---|
+|Encapsulación|Proteger los datos. Variables de instancia privados y métodos de acceso públicos|
+|Herencia|Extender una clase base, definir una clase de una ya existente|
+|Polimorfismo|Diferentes objetos responden de manera diferente al mismo mensaje|
+|Abstracción|Trabajar con interfaces|
+
+
+
 ## Ejemplo de clase
 
 
