@@ -5,9 +5,15 @@ namespace clases
 {
     public class X: IServicio
     {
+
+        public X(){}
+
+        ~X(){}
+
+
         public void metodo(int x)
         {
-            Console.WriteLine("{0} : {1}",x,(x*2));
+            Console.WriteLine("Dato = {0} : Resultado = {1}",x,(x*2));
         }
         public void metodo(int x, char c)
         {

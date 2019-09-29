@@ -1,4 +1,6 @@
 ﻿using System;
+using clases;
+using interfaces;
 
 namespace chapter6
 {
@@ -12,6 +14,9 @@ namespace chapter6
         static void MockTestA()
         {
             Console.WriteLine();
+            IServicio servX = new X();
+            var entero = 9;
+            servX.metodo(entero);
         }
     }
 }
