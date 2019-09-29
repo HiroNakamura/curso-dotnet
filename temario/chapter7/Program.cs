@@ -11,8 +11,11 @@ namespace chapter7
 
         static void MockTestA()
         {
+            Console.WriteLine("************** Excepciones **************");
             object obj = null;
             object tipo = null;
+            string except = "";
+
             try
             {
                 tipo = obj.GetType();
@@ -20,13 +23,16 @@ namespace chapter7
             }
             catch(Exception ex)
             {
-                Console.WriteLine("Error = {0}",ex.Message);
+                except = ex.StackTrace;
+                Console.WriteLine("Error, ha ocurrido una excepcion = {0}",ex.Message);
             }
             finally
             {
                 Console.WriteLine("El bloque ha finalizado");
+                Console.WriteLine("Excepcion = {0}",except);
             }
 
+            Console.WriteLine("*********************************************");
 
             int x = 5;
             int y = 0;
@@ -36,8 +42,12 @@ namespace chapter7
             }
             catch(DivideByZeroException ex)
             {
-                Console.WriteLine("Error = {0}",ex.Message);
+                except = ex.StackTrace;
+                Console.WriteLine("Error al dividir x cero = {0}",ex.Message);
+                Console.WriteLine("Excepcion = {0}",except);
             }
+
+            Console.WriteLine("*********************************************");
 
             try
             {
@@ -47,6 +57,26 @@ namespace chapter7
             {
                 Console.WriteLine("Good bye!!");
             }
+            Console.WriteLine("*********************************************");
+
+            int[] numeros = new int[3];//0,1,2
+            try
+            {
+                Console.WriteLine("{0}",numeros[3]);
+            }
+            catch(IndexOutOfRangeException ex)
+            {
+                except = ex.StackTrace;
+                Console.WriteLine("Error al acceder a un indice inexistente = {0}",ex.Message);
+                Console.WriteLine("Excepcion = {0}",except);
+            }
+            finally
+            {
+                Console.WriteLine("Ha finalizado el bloque!!");
+            }
+
+
+
 
         }
     }
