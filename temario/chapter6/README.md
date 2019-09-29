@@ -15,7 +15,12 @@ public interface IOperacion
     long metodo(byte b);
     void metodo();
 }
+```
 
+
+**OperacionImpl.cs**
+
+```java
 public class OperacionImpl: IOperacion
 {
     public void metodo(string cad)
