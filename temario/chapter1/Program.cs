@@ -108,8 +108,16 @@ namespace chapter1
             Console.WriteLine("Tipo = {0}",tipo);
             tipo = dateTime.GetType();
             Console.WriteLine("Tipo = {0}",tipo);
-            tipo = obj.GetType();
-            Console.WriteLine("Tipo = {0}",tipo);
+            
+            try
+            {
+                tipo = obj.GetType();
+                Console.WriteLine("Tipo = {0}",tipo);
+            }catch(Exception ex)
+            {
+                Console.WriteLine("Error = {0}",ex.Message);
+            }
+            
             tipo = numero.GetType();
             Console.WriteLine("Tipo = {0}",tipo);
 
