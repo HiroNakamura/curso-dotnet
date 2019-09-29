@@ -61,7 +61,7 @@ public enum Colores
 **Idiomas.cs**
 
 ```java
-pulic enum Idiomas
+public enum Idiomas
 {
   INGLES,ESPANOL,FRANCES,PORTUGUES,ITALIANO,ALEMAN,RUSO,MANDARIN,JAPONES
 }
