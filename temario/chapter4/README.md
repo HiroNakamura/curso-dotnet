@@ -29,7 +29,7 @@ La POO es un paradigma de programación en la que se trabaja con objetos y clase
 using System;
 
 class Modelo
-    {
+{
         public Modelo()
         {
             Console.WriteLine("Objeto Modelo creado e inicializado");
@@ -46,7 +46,7 @@ class Modelo
         {
             get;set;
         }
-    }
+ }
 ```
 
 **Ejemplo de instanciación**
