@@ -40,6 +40,18 @@ char caracter = '\u99877';
 Modelo modelo = new Modelo();
 var str = "juan".ToUpper();
 
+object obj = null;
+
+ try
+ {
+    tipo = obj.GetType();
+    Console.WriteLine("Tipo = {0}",tipo);
+}
+catch(Exception ex)
+{
+    Console.WriteLine("Error = {0}",ex.Message);
+}
+
 ```
 
 
