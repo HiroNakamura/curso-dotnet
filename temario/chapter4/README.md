@@ -92,7 +92,47 @@ class ServicioImpl: IServicio
 
 ```
 
+### Diferencias entre estructuras y clases
 
 
+Una clase puede tener un **constructor** y un **destructor**. 
+
+```java
+public class X
+{
+  public X(){}
+  
+  ~X(){}
+}
+
+```
+
+Una estructura no puede tener un **constructor** vacío y tampoco un **destructor**.
+
+```java
+public struct Molde
+{
+  public Molde(string nombre)
+  {
+     Nombre = nombre;
+  }
+  
+  public Molde(){}
+  
+  public string Nombre
+  {
+     get; set;
+  }
+}
+
+```
+
+Instanciación.
+
+```java
+var molde = new Molde("Rojo de ambar");
+var molde = new Molde();
+molde.Nombre = "El chocolate es mejor en México";
+```
 
 
