@@ -20,11 +20,11 @@ Es un repositorio sobre el lenguaje de programación C#.
 
 
 ## Herramientas usadas
-- Visual Studio Code.
-- dotnet.
-- Nuget.
-- PostgreSQL.
-- Git.
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [dotnet](https://dotnet.microsoft.com/)
+- [Nuget](https://www.nuget.org/)
+- [PostgreSQL](https://www.postgresql.org/git )
+- [Git](https://git-scm.com/)
 
 ## Crear proyecto
 
