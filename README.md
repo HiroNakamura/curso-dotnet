@@ -29,7 +29,7 @@ Es un repositorio sobre el lenguaje de programación C#.
 ## Crear proyecto
 
 
-```sh
+```java
 $ mkdir proyecto
 $ cd proyecto
 $ code .
@@ -40,7 +40,7 @@ $ dotnet new console
 ## Ejecutar proyecto
 
 
-```sh
+```java
 $ dotnet run
 ```
 
