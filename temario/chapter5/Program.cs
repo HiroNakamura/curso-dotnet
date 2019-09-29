@@ -39,6 +39,17 @@ namespace chapter5
                 Console.WriteLine("El objeto {0} y el objeto {1} no son iguales",my_x1,my_y1);
             }
 
+            CalculoImpl calculoImpl = new CalculoImpl();
+            var enteros = new int[]{45,55,56,76,88,90,101,109,210,321,333,432,540};
+            foreach(var entero in enteros)
+            {
+                if(calculoImpl.EsPar(entero))
+                {
+                    Console.WriteLine("Cumple la condicion: {0}",entero);
+                }
+            }
+
+            
         }
     }
 }
