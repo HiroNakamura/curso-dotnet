@@ -11,7 +11,7 @@ namespace chapter6
 
         static void MockTestA()
         {
-            
+            Console.WriteLine();
         }
     }
 }
