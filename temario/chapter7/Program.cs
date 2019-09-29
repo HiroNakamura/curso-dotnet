@@ -27,6 +27,15 @@ namespace chapter7
                 Console.WriteLine("El bloque ha finalizado");
             }
 
+            try
+            {
+                int divisionCero = 5/0;
+            }
+            catch(DivideByZeroException ex)
+            {
+                Console.WriteLine("Error = {0}",ex.Message);
+            }
+
             
 
         }
