@@ -12,7 +12,7 @@ Es un repositorio sobre el lenguaje de programación C#.
 3. [Estructuras de datos (Arrays, Listas, Mapas, etc.](https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter3)
 4. [Clases y objetos](https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter4)
 5. [Encapsulación y herencia](https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter5)
-6. Abstracción y polimorfismo.
+6. [Abstracción y polimorfismo](https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter6)
 7. Excepciones. 
 8. Archivos.
 9. Manejo de tiempo.
