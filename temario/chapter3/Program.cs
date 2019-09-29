@@ -1,4 +1,5 @@
 ﻿using System;
+using enumeraciones;
 using System.Collections.Generic;
 
 namespace chapter3
@@ -32,7 +33,26 @@ namespace chapter3
                 Console.WriteLine("{0}",itemHash);
             }
 
-            
+            Cafes myCafe = Cafes.MEDIANO;
+            Console.WriteLine("Cafe: {0}",myCafe);
+            if(myCafe == Cafes.MEDIANO)
+            {
+                Console.WriteLine("Mi cafe es de tamaño mediano");
+            }
+
+            switch(myCafe)
+            {
+                case Cafes.CHICO: 
+                Console.WriteLine("Este cafe es de tamaño chico");break;
+                case Cafes.MEDIANO: 
+                Console.WriteLine("Este cafe es de tipo mediano");break;
+                case Cafes.GRANDE: 
+                Console.WriteLine("Este cafe es de tipo grande");break;
+                case Cafes.JUMBO: 
+                Console.WriteLine("Este cafe es de tipo jumbo");break;
+                default: 
+                Console.WriteLine("Ese cafe esta en vias de no existir");break;
+            }
 
         }
 
