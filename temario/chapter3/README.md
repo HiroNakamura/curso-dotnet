@@ -1,4 +1,4 @@
-# Estructuras de dats en C#
+# Estructuras de datos en C#
 
 Algunas estructuras de control son:
 
