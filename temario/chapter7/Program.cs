@@ -6,7 +6,29 @@ namespace chapter7
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            MockTestA();
+        }
+
+        static void MockTestA()
+        {
+            object obj = null;
+            object tipo = null;
+            try
+            {
+                tipo = obj.GetType();
+                Console.WriteLine("Tipo = {0}",tipo);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine("Error = {0}",ex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("El bloque ha finalizado");
+            }
+
+            
+
         }
     }
 }
