@@ -12,6 +12,14 @@ namespace chapter4
         {
             MockTestA();
             MockTestB();
+            MockTestC();
+        }
+
+        static void MockTestC()
+        {
+            Oviparo perdigi = new Oviparo("Esteban");
+            Console.WriteLine();
+            Canario canario = new Canario("Ernesto");
         }
 
         static void MockTestB()
