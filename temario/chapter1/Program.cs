@@ -97,6 +97,22 @@ namespace chapter1
             Console.WriteLine("Telefono: {0}",cliente[2]);
             Console.WriteLine("DateTime: {0}",dateTime);
             Console.WriteLine(DateTime.Today);
+
+            object tipo = s.GetType();
+            Console.WriteLine("Tipo = {0}",tipo);
+            tipo = verdadero.GetType();
+            Console.WriteLine("Tipo = {0}",tipo);
+            tipo = entero.GetType();
+            Console.WriteLine("Tipo = {0}",tipo);
+            tipo = myObj.GetType();
+            Console.WriteLine("Tipo = {0}",tipo);
+            tipo = dateTime.GetType();
+            Console.WriteLine("Tipo = {0}",tipo);
+            tipo = obj.GetType();
+            Console.WriteLine("Tipo = {0}",tipo);
+            tipo = numero.GetType();
+            Console.WriteLine("Tipo = {0}",tipo);
+
         }
         
         
