@@ -7,9 +7,37 @@ namespace chapter8
     class Program
     {
         public static readonly string PATH = @"C:\\Users\\DELL\\Documents\\programacion\\testRepositories\\curso-dotnet\\temario\\chapter8\\datos.csv";
+
+        public static readonly string RUTA = @"C:\\Users\\DELL\\Documents\\programacion\\testRepositories\\curso-dotnet\\temario\\chapter8\\datos.dat";
+        
+
         static void Main(string[] args)
         {
             TestMockA();
+        }
+
+        static void EscribiendoArch(string archivo) {
+            FileStream F = new FileStream(archivo, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            
+            for(int i = 1; i <= 20; i++)
+            {
+                F.WriteByte((byte)i);
+            }
+            
+            F.Position = 0;
+            
+            for(int i = 0; i <= 20; i++)
+            {
+                Console.Write(F.ReadByte() + " ");
+            }
+            
+            F.Close();
+            Console.ReadKey();
+        }
+
+        static void TestMockB()
+        {
+
         }
 
         static void TestMockA()
@@ -36,7 +64,7 @@ namespace chapter8
                 }
             }
 
-            
+
 
         }
     }
