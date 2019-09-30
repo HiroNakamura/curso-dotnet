@@ -14,10 +14,36 @@ namespace chapter8
         static void Main(string[] args)
         {
             TestMockA();
+            TestMockB();
+        }
+
+        static void EscribiendoLeyendoArch(string archivo)
+        {
+            if (!File.Exists(archivo))
+            {
+                using (StreamWriter sw = File.CreateText(archivo))
+                {
+                    sw.WriteLine("1. El color no tiene forma.");
+                    sw.WriteLine("2. Torre oscura: Resurección.");
+                    sw.WriteLine("3. El Cabalista de Lisboa.");
+                }
+            }
+            
+            using (StreamReader sr = File.OpenText(archivo))
+            {
+                string s;
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+            Console.WriteLine("Hemos terminado de procesar archivo");
         }
 
         static void EscribiendoArch(string archivo) {
             FileStream F = new FileStream(archivo, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+            
+            Console.WriteLine("1. Escribiendo archivo...");
             
             for(int i = 1; i <= 20; i++)
             {
@@ -25,6 +51,8 @@ namespace chapter8
             }
             
             F.Position = 0;
+
+            Console.WriteLine("2. Leyendo archivo...");
             
             for(int i = 0; i <= 20; i++)
             {
@@ -37,7 +65,10 @@ namespace chapter8
 
         static void TestMockB()
         {
-
+            if(File.Exists(RUTA))
+            {
+                EscribiendoArch(RUTA);
+            }
         }
 
         static void TestMockA()
