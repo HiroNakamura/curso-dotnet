@@ -4,7 +4,7 @@ Una **excepción** es una anomalía en el flujo normal de un programa. Un **erro
 
 
 
-## Tabla de excepciones
+## Tabla con algunas excepciones
 
 |Excepción|Descripción|
 |---|---|
@@ -22,6 +22,7 @@ Una **excepción** es una anomalía en el flujo normal de un programa. Un **erro
 ## Ejemplo de excepciones
 
 
+Usar el bloque **try-catch**
 
 ```java
 
@@ -36,8 +37,11 @@ catch(Exception ex)
 {
    Console.WriteLine("Error = {0}",ex.Message);
 }
+```
 
+Usar el bloque **try-finally**
 
+```java
 try
 {
   Console.WriteLine("Hola");
@@ -46,8 +50,18 @@ finally
 {
   Console.WriteLine("Good bye!!");
 }
-
-
-
-
 ```
+
+## Extendiendo una Exception
+
+**MyExcepcion.cs**
+
+```java
+public class MyExcepcion: Exception
+{
+   public MyExcepcion(string message): base(message){}
+
+   ~MyExcepcion(){}
+}
+```
+
