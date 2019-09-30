@@ -14,7 +14,7 @@ Es un repositorio sobre el lenguaje de programación C#.
 5. [Encapsulación y herencia](https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter5)
 6. [Abstracción y polimorfismo](https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter6)
 7. [Excepciones](https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter7) 
-8. Archivos.
+8. [Archivos](https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter8)
 9. Manejo de tiempo.
 10. Otros.
 
