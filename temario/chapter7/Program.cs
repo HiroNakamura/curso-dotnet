@@ -1,4 +1,6 @@
 ﻿using System;
+using excepciones;
+using clases;
 
 namespace chapter7
 {
@@ -7,6 +9,31 @@ namespace chapter7
         static void Main(string[] args)
         {
             MockTestA();
+            MockTestB();
+        }
+
+        static void MockTestB()
+        {
+            Ritmos ritmo = new Ritmos();
+            ritmo.Edad = 0;
+            Console.WriteLine("*** MyExcepcion ***");
+            try
+            {
+                ritmo.mostrarCalculo();
+            }
+            catch(MyExcepcion ex)
+            {
+                Console.WriteLine("HelpLink = {0}", ex.HelpLink);
+                Console.WriteLine("Message = {0}", ex.Message);
+                Console.WriteLine("Source = {0}", ex.Source);
+                Console.WriteLine("StackTrace = {0}", ex.StackTrace);
+                Console.WriteLine("TargetSite = {0}", ex.TargetSite);
+            }
+            finally
+            {
+                Console.WriteLine("Ha finalizado el bloque");
+            }
+
         }
 
         static void MockTestA()
@@ -92,9 +119,6 @@ namespace chapter7
             {
                 Console.WriteLine("Ha finalizado el bloque!!");
             }
-
-
-
 
         }
     }
