@@ -8,6 +8,21 @@ namespace chapter5
         static void Main(string[] args)
         {
             MockTestA();
+            MockTestB();
+        }
+
+        static void MockTestB()
+        {
+            Console.WriteLine("**** Clases ****");
+            Cliente clienteA = new Cliente();
+            Console.WriteLine("{0}",clienteA);
+            Cliente clienteB = new Cliente(1L,"Armando","Archundia");
+            Console.WriteLine("{0}",clienteB); 
+            ClienteFrecuente clienteFrecuenteA = new ClienteFrecuente();
+            Console.WriteLine("{0}",clienteFrecuenteA);
+            DateTime fecha = new DateTime();
+            ClienteFrecuente clienteFrecuenteB = new ClienteFrecuente(2L,"Thomas","Muller",fecha);
+            Console.WriteLine("{0}",clienteFrecuenteB);
         }
 
         static void MockTestA()
