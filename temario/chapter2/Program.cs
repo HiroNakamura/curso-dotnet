@@ -31,6 +31,22 @@ namespace chapter2
             { }
         }
 
+        static void CicloInfinitoWhile()
+        {
+            while(true)
+            {
+                Console.WriteLine("101010101");
+            }
+        }
+
+        static void CicloInfinitoFor()
+        {
+            for(;;)
+            {
+                Console.WriteLine("101010101");
+            }
+        }
+
         static void SentenciasWhile()
         {
             int cont = 0;
@@ -230,6 +246,13 @@ namespace chapter2
                 case '\u0099': Console.WriteLine("Elegiste \u0099"); break;
                 default: Console.WriteLine("Elegiste \u0049"); break;
             }
+
+            bool booleano = false;
+            if("Europa".Equals("EUropa"))
+            {
+                booleano = true;
+            }
+            Console.WriteLine(booleano? "Las cadenas son iguales" : "Las cadenas no son iguales");
 
         }
     }
