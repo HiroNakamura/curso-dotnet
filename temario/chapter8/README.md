@@ -21,3 +21,45 @@ Un **archivo** es un conjunto de bits almacenados en un dispositivo y una ruta d
 |StreamWriter|Is used for writing characters to a stream.|
 |StringReader|Is used for reading from a string buffer.|
 |StringWriter|Is used for writing into a string buffer.|
+
+
+
+Uso de **File** en C#.
+
+
+```java
+using System.IO;
+
+//...
+
+public static readonly string PATH = @"C:\\Users\\docs\\datos.csv";
+
+//...
+
+if(File.Exists(PATH))
+{
+  Console.WriteLine("El archivo existe");
+  //...
+}
+
+```
+
+
+Uso de **FileInfo** en C#.
+
+
+```java
+using System.IO;
+
+//...
+
+public static readonly string PATH = @"C:\\Users\\docs\\datos.csv";
+
+//...
+
+FileInfo fileInfo = new FileInfo(PATH);
+string nombreArchivo = fileInfo.Name;
+string directorio = fileInfo.DirectoryName;
+
+```
+
