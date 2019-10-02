@@ -15,6 +15,16 @@ namespace chapter8
         {
             TestMockA();
             TestMockB();
+            TestMockC();
+        }
+
+        static void TestMockC()
+        {
+            FileInfo fileInfo = new FileInfo(RUTA);
+            Console.WriteLine("Archivo: {0}",fileInfo);
+            Console.WriteLine("Directorio: {0}",fileInfo.Directory);
+            Console.WriteLine("Nombre del directorio: {0}",fileInfo.DirectoryName);
+            Console.WriteLine("Nombre: {0}",fileInfo.Name);
         }
 
         static void EscribiendoLeyendoArch(string archivo)
@@ -81,7 +91,8 @@ namespace chapter8
                 myFile.Existe = true;
             }
 
-            myFile.Nombre = PATH;
+            myFile.Directorio = PATH;
+            myFile.Nombre = new FileInfo(PATH).Name;
             DateTime fechaActualizacion = File.GetLastAccessTime(PATH);
             myFile.UltimoAcceso = fechaActualizacion;
             Console.WriteLine("{0}",myFile);

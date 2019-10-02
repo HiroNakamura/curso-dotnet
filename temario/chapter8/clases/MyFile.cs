@@ -10,6 +10,11 @@ namespace clases
         get;set;
       }
 
+      public string Directorio
+      {
+        get;set;
+      }
+
       public DateTime UltimoAcceso
       {
         get;set;
@@ -23,11 +28,12 @@ namespace clases
         Console.WriteLine("Objeto MyFile creado e inicializado");
       }
 
-      public MyFile(string nombre, DateTime ultimoAcceso, bool existe):base()
+      public MyFile(string nombre, DateTime ultimoAcceso, bool existe, string directorio):base()
       {
         Nombre = nombre;
         UltimoAcceso = ultimoAcceso;
         Existe = existe;
+        Directorio = directorio;
       }
       
       ~MyFile(){}
@@ -35,7 +41,7 @@ namespace clases
       public override string ToString()
       {
         string result = Existe==true? "existe" : "no existe"; 
-        return String.Format("El archivo {0} {1} , el ultimo acceso fue el {2}",Nombre,result,UltimoAcceso);
+        return String.Format("El archivo {0} {1} , el ultimo acceso fue el {2}, Directorio = {3}",Nombre,result,UltimoAcceso,Directorio);
       }
   }
 }
