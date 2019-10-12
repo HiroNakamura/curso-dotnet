@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace chapter9
 {
@@ -9,6 +10,20 @@ namespace chapter9
             MockTestA();
             MockTestB();
             MockTestC();
+            MockTestD();
+        }
+
+        static void MockTestD()
+        {
+            DateTime localDate = DateTime.Now;
+            String[] cultureNames = { "es-MX","es-ES","es-AR","en-US", "en-GB", "fr-FR","de-DE", "ru-RU" };
+            
+            Console.WriteLine("Formatos en varios países:");
+            foreach (var cultureName in cultureNames)
+            {
+                var culture = new CultureInfo(cultureName);
+                Console.WriteLine("{0}: {1}", cultureName,localDate.ToString(culture));
+            }
         }
 
         static DateTime GetYesterday()
@@ -26,7 +41,7 @@ namespace chapter9
             }
 
             Console.WriteLine("Ayer fue: {0}",GetYesterday());
-            
+
         }
 
         static void MockTestB()
