@@ -15,7 +15,7 @@ Es un repositorio sobre el lenguaje de programación C#.
 6. [Abstracción y polimorfismo](https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter6)
 7. [Excepciones](https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter7) 
 8. [Archivos](https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter8)
-9. Manejo de tiempo.
+9. [Manejo de tiempo](https://github.com/HiroNakamura/curso-dotnet/tree/master/temario/chapter9)
 10. Otros.
 
 
