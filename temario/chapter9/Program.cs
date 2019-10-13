@@ -32,6 +32,19 @@ namespace chapter9
                 Console.WriteLine("Fecha de ingreso: {0}",empleado.Ingreso);
                 Console.WriteLine("========================================");
             }
+            DateTime valor = new DateTime(2019, 10, 12);
+            foreach(var empleado in empleados)
+            {
+                empleado.Ingreso = valor;
+            }
+            Console.WriteLine("\n\tEmpleados [con fecha actualizada]:\n");
+            foreach(var empleado in empleados)
+            {
+                Console.WriteLine("{0}",empleado);
+                Console.WriteLine("Nombre: {0}",empleado.Nombre);
+                Console.WriteLine("Fecha de ingreso: {0}",empleado.Ingreso);
+                Console.WriteLine("========================================");
+            }
         }
 
         static void MockTestD()
