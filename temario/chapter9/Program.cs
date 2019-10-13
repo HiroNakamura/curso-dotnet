@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Globalization;
+using System.Collections.Generic;
+using clases;
 
 namespace chapter9
 {
@@ -11,6 +13,25 @@ namespace chapter9
             MockTestB();
             MockTestC();
             MockTestD();
+            MockTestE();
+        }
+
+        static void MockTestE()
+        {
+            List<Empleado> empleados = new List<Empleado>();
+            empleados.Add(new Empleado("Juan Cortes", DateTime.Now));
+            empleados.Add(new Empleado("Mariana Alvarez", DateTime.Now));
+            empleados.Add(new Empleado("Erika Lara", DateTime.Now));
+            empleados.Add(new Empleado("Federico Lopez", DateTime.Now));
+            empleados.Add(new Empleado("Saul Corona", DateTime.Now));
+            Console.WriteLine("\n\tEmpleados:\n");
+            foreach(var empleado in empleados)
+            {
+                Console.WriteLine("{0}",empleado);
+                Console.WriteLine("Nombre: {0}",empleado.Nombre);
+                Console.WriteLine("Fecha de ingreso: {0}",empleado.Ingreso);
+                Console.WriteLine("========================================");
+            }
         }
 
         static void MockTestD()
