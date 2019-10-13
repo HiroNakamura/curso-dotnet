@@ -45,6 +45,20 @@ namespace chapter9
                 Console.WriteLine("Fecha de ingreso: {0}",empleado.Ingreso);
                 Console.WriteLine("========================================");
             }
+
+            Dictionary<Empleado, DateTime> mapaEmpleados = new Dictionary<Empleado, DateTime>();
+            DateTime fecha = new DateTime(2019,12,01);
+            foreach(var emp in empleados)
+            {
+                mapaEmpleados.Add(emp,fecha);
+            }
+            Console.WriteLine("\n\tEmpleados:\n");
+            foreach (var item in mapaEmpleados)
+            {
+                Console.WriteLine("Empleado: {0}",item.Key);
+                Console.WriteLine("Fecha: {0}",item.Value);
+                Console.WriteLine("========================================");
+            }
         }
 
         static void MockTestD()
@@ -122,8 +136,6 @@ namespace chapter9
             Console.WriteLine("Dia del año: {0}",dateTime.DayOfYear);
             var endYear = 365 - dateTime.DayOfYear;
             Console.WriteLine("Faltan: {0} dias para que sea fin de año",endYear);
-
-
         }
     }
 }
