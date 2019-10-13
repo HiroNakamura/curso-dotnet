@@ -15,8 +15,6 @@ namespace clases
      
      ~Empleado(){}
      
-     
-     
      public string Nombre
      {
         get; set;
