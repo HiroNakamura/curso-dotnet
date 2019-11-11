@@ -4,7 +4,7 @@ namespace estructuras
 {
     struct Fecha
     {
-        public Fecha(int anyo, int mes, in dia, int hora,int minutos, int segundos){
+        public Fecha(int anyo, int mes, int dia, int hora,int minutos, int segundos){
             Mes = mes;
             Anyo = anyo;
             Dia = dia;
@@ -47,7 +47,7 @@ namespace estructuras
       
         public string GetFecha()
         {
-            return Anyo + " - " + Mes+" - "+Dia+"-"+Hora+":"+Minutos+":"+Segundos;
+            return Anyo + " - " + Mes+" - "+Dia+" | "+Hora+":"+Minutos+":"+Segundos;
         }
 
     }
