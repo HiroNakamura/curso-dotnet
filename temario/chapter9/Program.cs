@@ -2,6 +2,7 @@
 using System.Globalization;
 using System.Collections.Generic;
 using clases;
+using estructuras;
 
 namespace chapter9
 {
@@ -14,6 +15,21 @@ namespace chapter9
             MockTestC();
             MockTestD();
             MockTestE();
+            MockTestF();
+        }
+        
+        static void MockTestF()
+        {
+            DateTime myDate = new DateTime(2019, 11, 10, 19, 33, 45);  
+            int year = myDate.Year; 
+            int month = myDate.Month;  
+            int day = myDate.Day;  
+            int hour = myDate.Hour;
+            int minute = myDate.Minute; 
+            int second = myDate.Second; 
+            int weekDay = (int)myDate.DayOfWeek; 
+            Fecha fecha = new Fecha(year,month,day,hour,minute,second);
+            Console.WriteLine("{0}",fecha.GetFecha());
         }
 
         static void MockTestE()
