@@ -53,5 +53,27 @@ catch(Exception ex)
 }
 
 ```
+## String en C#
+
+```java
+var nombre = "Juliana Garcia";
+Console.WriteLine("{0}",nombre);
+string cadena = new string("Hola, mundo!!");
+string str = "\n***Una cadena @@@\t";
+string clone_str = str.Clone();
+bool contiene = "En un bosque oscuro.".Contains("bosque");
+
+bool bandera = false;
+if("doc.xml".EndsWith("xml"))
+{
+   bandera = true;
+}
+
+string salida = "GITHUB".Equals("GITHUB")? "Bienvenido a Github" : "Bienvenido...";
+sring mayuscula = "andromeda".ToUpper();
+string minuscula = "ORION".ToLower();
+string inicio = "Gladiola y Florestan".StartsWith("Hortencia");
+string espacio = " Mi Kibalstin ".Trim();
+```
 
 
