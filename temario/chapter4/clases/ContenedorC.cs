@@ -9,6 +9,8 @@ namespace clases
             MiServicioC = servicioC;
         }
 
+        ~ContenedorC(){}
+
         public ServicioC MiServicioC
         {
             get;set;
