@@ -31,7 +31,7 @@ namespace chapter1
             DateTime hoy = DateTime.Today;
             GetTipos(hoy);
             Console.WriteLine("----------------------------------------");
-            
+            Operaciones();
         }
 
         static void GetTipos(object dato)
@@ -40,7 +40,19 @@ namespace chapter1
             Console.WriteLine("Tipo: {0}",dato.GetType());
         }
 
-        
+        static void Operaciones()
+        {
+            bool verdadero = 12 > 3 && 45 >= 99;//false
+            Console.WriteLine("{0}",verdadero);
+            verdadero = 45 >= 99 || 33 == 33;//true
+            Console.WriteLine("{0}",verdadero);
+            verdadero = 12 > 3 && 45 >= 9;//true
+            Console.WriteLine("{0}",verdadero);
+            verdadero = false && false;//false
+            Console.WriteLine("{0}",verdadero);
+            verdadero = !(100 <= 0 && -9 > 0);//true
+            Console.WriteLine("{0}",verdadero);
+        }
         
         static void Parametros(string[] datos)
         {
