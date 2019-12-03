@@ -1,5 +1,6 @@
 ﻿using System;
 using enumeraciones;
+using diccionarios;
 using System.Collections.Generic;
 
 namespace chapter3
@@ -11,8 +12,36 @@ namespace chapter3
             MockTestA();
             MockTestB();
             MockTestC();
+            MockTestD();
         }
         
+        static void MockTestD()
+        {
+            Diccionario my_diccionario = new Diccionario();
+            Console.WriteLine(my_diccionario.ToString());
+            my_diccionario.Add(1,"Se ha declarado la ley imparcial.");
+            my_diccionario.Add(2,"La roca de los tiempos.");
+            my_diccionario.Add(3,"El libro de los inocentes.");
+            int total = my_diccionario.Count;
+            Console.WriteLine("Total: {0}",total);
+            foreach (var item in my_diccionario)
+            {
+                int numero = item.Key;
+                string cadena = item.Value;
+                Console.WriteLine("Llave: {0} , Valor: {1}",numero,cadena);
+            }
+
+            my_diccionario.Clear();
+            total = my_diccionario.Count;
+            Console.WriteLine("Total: {0}",total);
+
+            my_diccionario.TryAdd(1, new string("El libro del Esplendor."));
+            my_diccionario.TryAdd(2, new string("El libro de la Esperanza."));
+            my_diccionario.TryAdd(3, new string("El libro de los Naufragios."));
+            total = my_diccionario.Count;
+            Console.WriteLine("Total: {0}",total);
+
+        }
         static void MockTestC()
         {
             LinkedList<float> lista = new LinkedList<float>();
