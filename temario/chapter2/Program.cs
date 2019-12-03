@@ -9,6 +9,7 @@ namespace chapter2
         static void Main(string[] args)
         {
             SentenciasIf();
+            SentenciasIfTwo();
             SentenciasFor();
             SentenciasWhile();
         }
@@ -21,6 +22,27 @@ namespace chapter2
         static bool OperaC(string str1, string str2) => str2.Equals(str1);
 
         static bool OperaD(char entrada) => Char.IsDigit(entrada);
+
+        static bool OperaE(char entrada) => Char.IsLetter(entrada);
+
+        static void SentenciasIfTwo()
+        {
+            bool verd = OperaE('A');
+            if(verd)
+            {
+                Console.WriteLine("'A' es letra");
+            }
+            char[] caracteres = {'d','2','5','C','=','?','\u0032'};
+            foreach(var car in caracteres)
+            {
+                if(OperaE(car))
+                {
+                    Console.WriteLine("{0} es letra",car);
+                }else{
+                    Console.WriteLine("{0} tipo: {1} y no es letra",car,car.GetType());
+                }
+            }
+        }
 
 
         static void SentenciasFor()
