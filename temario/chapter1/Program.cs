@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace chapter1
 {
@@ -34,6 +35,37 @@ namespace chapter1
             Console.WriteLine("----------------------------------------");
             Operaciones();
             Imprimir();
+            VerTipos();
+            string espacios = QuitarEspacios("12 33 ");
+            Console.WriteLine("Entrada = {0}",espacios);
+            IntroduceDatos();
+        }
+
+        static string QuitarEspacios(string cadena)
+        {
+            string resultado = "";
+            for(int i=0; i < cadena.Length; i++)
+            {
+                if(!cadena[i].Equals(" "))
+                {
+                    resultado += cadena[i];
+                    resultado = resultado.Trim();
+                }
+                
+            }
+            return resultado;
+        }
+        static void IntroduceDatos()
+        {
+            Console.WriteLine("Introduce un numero:");
+            string numeroStr = Console.ReadLine();
+            Console.WriteLine("Numero: {0}",numeroStr);
+            Console.WriteLine("Introduce un otro numero:");
+            int numero = Int32.Parse(QuitarEspacios(Console.ReadLine()));
+            Console.WriteLine("Numero: {0}",numero);
+            Console.WriteLine("Introduce un valor booleano:");
+            bool booleano = Boolean.Parse(Console.ReadLine());
+            Console.WriteLine("Booeano: {0}",booleano);
         }
 
         static void GetTipos(object dato)
@@ -99,6 +131,7 @@ namespace chapter1
             Object myObj = new Object();
             const string hola_mundo = "Ciao, mondo!!";
             var cliente = new string[]{"Carlos","Uribe","555-54-432"};
+            dynamic dinamico = "Dinamico";
             Console.WriteLine("Tipos de datos:");
             Console.WriteLine("sbyte: {0}", sb);
             Console.WriteLine("short: {0}", s);
@@ -121,7 +154,19 @@ namespace chapter1
             Console.WriteLine("Telefono: {0}",cliente[2]);
             Console.WriteLine("DateTime: {0}",dateTime);
             Console.WriteLine(DateTime.Today);
-
+            Console.WriteLine("{0} : {1}",dinamico,dinamico.GetType());
+            dinamico = 900;
+            Console.WriteLine("{0} : {1}",dinamico,dinamico.GetType());
+            dinamico = '\u8990';
+            Console.WriteLine("{0} : {1}",dinamico,dinamico.GetType());
+            
+            dinamico = null;
+            try{
+                Console.WriteLine("{0} : {1}",dinamico,dinamico.GetType());
+            }catch(Exception ex)
+            {
+                Console.WriteLine("Error: {0}",ex.Message);
+            }
             object tipo = s.GetType();
             Console.WriteLine("Tipo = {0}",tipo);
             tipo = verdadero.GetType();
@@ -145,6 +190,34 @@ namespace chapter1
             tipo = numero.GetType();
             Console.WriteLine("Tipo = {0}",tipo);
 
+        }
+
+        static void VerTipos()
+        {
+            dynamic[] dinamicos = {(byte) 32, (int) 43, '\u3211',"Europa renacida",false, new Object(),(float) 5.6f};
+            foreach(var din in dinamicos)
+            {
+                if(din.GetType()==typeof(int))
+                {
+                    Console.WriteLine("int = {0}",din);
+                }
+
+                if(din.GetType()==typeof(byte))
+                {
+                    Console.WriteLine("byte = {0}",din);
+                }
+
+                if(din.GetType()==typeof(char))
+                {
+                    Console.WriteLine("char = {0}",din);
+                }
+
+                if(din.GetType()==typeof(string))
+                {
+                    Console.WriteLine("string = {0}",din);
+                }
+
+            }
         }
         
         

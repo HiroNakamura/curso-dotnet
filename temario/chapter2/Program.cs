@@ -12,6 +12,34 @@ namespace chapter2
             SentenciasIfTwo();
             SentenciasFor();
             SentenciasWhile();
+            VerSumas();
+        }
+
+        static void VerSumas()
+        {
+            int a = 9;
+            int b = 2;
+            Console.WriteLine("{0} + {1} = {2}",a,b,suma(a,b));
+            a = 6;
+            b = 5;
+            Console.WriteLine("{0} + {1} = {2}",a,b,suma(a,b));
+            a = 8;
+            b = 3;
+            Console.WriteLine("{0} + {1} = {2}",a,b,suma(a,b));
+        }
+
+        static int suma(int a, int b)
+        {
+            while(a > b)
+            {
+                b--; a++;
+            }
+
+            while(a < 0)
+            {
+                b--; a++;
+            }
+            return b;
         }
         
         
@@ -25,6 +53,10 @@ namespace chapter2
 
         static bool OperaE(char entrada) => Char.IsLetter(entrada);
 
+        static bool OperaF(char entrada) => !Char.IsDigit(entrada);
+
+        static bool OperaG(char entrada) => !Char.IsLetter(entrada);
+
         static void SentenciasIfTwo()
         {
             bool verd = OperaE('A');
@@ -32,7 +64,7 @@ namespace chapter2
             {
                 Console.WriteLine("'A' es letra");
             }
-            char[] caracteres = {'d','2','5','C','=','?','\u0032'};
+            char[] caracteres = {'d','2','5','C','=','?','\u0032','0','9','\u0021','\u3211'};
             foreach(var car in caracteres)
             {
                 if(OperaE(car))
@@ -41,6 +73,18 @@ namespace chapter2
                 }else{
                     Console.WriteLine("{0} tipo: {1} y no es letra",car,car.GetType());
                 }
+
+                if(OperaF(car))
+                {
+                    Console.WriteLine("No es digito: {0}",car);
+                }
+
+                if(OperaG(car))
+                {
+                    Console.WriteLine("No es letra: {0}",car);
+                }
+
+
             }
         }
 
