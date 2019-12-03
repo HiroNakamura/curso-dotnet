@@ -5,6 +5,7 @@ namespace chapter1
     class Program
     {
         public static readonly int MAX = 100;
+        public const int TAM = 500;
         
         static void Main(string[] args)
         {
@@ -31,7 +32,7 @@ namespace chapter1
             DateTime hoy = DateTime.Today;
             GetTipos(hoy);
             Console.WriteLine("----------------------------------------");
-            
+            Imprimir();
         }
 
         static void GetTipos(object dato)
@@ -40,7 +41,11 @@ namespace chapter1
             Console.WriteLine("Tipo: {0}",dato.GetType());
         }
 
-        
+        static void Imprimir()
+        {
+           Console.WriteLine("Constante TAM:{0}", TAM);
+            Console.WriteLine("Constante MAX:{0}", MAX);
+        }
         
         static void Parametros(string[] datos)
         {
