@@ -77,6 +77,32 @@ foreach(var tipo in tipos){
 
 ```
 
+## Uso de typeof
+
+```java
+
+int numero = 33;
+
+if(numero.GetType() == typeof(int)){
+   Console.WriteLine("{0} es int", numero);
+}
+
+Type t = typeof(obj1);
+Console.WriteLine("{0} es de tipo {1}",obj1,t);
+
+```
+
+## Uso de is
+
+```java
+
+var dato = 0;
+if("Programando en C#" is string){
+    dato = 2;
+}
+
+```
+
 
 
 ## String en C#
@@ -96,7 +122,7 @@ if("doc.xml".EndsWith("xml"))
 }
 
 string salida = "GITHUB".Equals("GITHUB")? "Bienvenido a Github" : "Bienvenido...";
-sring mayuscula = "andromeda".ToUpper();
+string mayuscula = "andromeda".ToUpper();
 string minuscula = "ORION".ToLower();
 string inicio = "Gladiola y Florestan".StartsWith("Hortencia");
 string espacio = " Mi Kibalstin ".Trim();
