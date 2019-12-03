@@ -32,6 +32,7 @@
 ## Ejemplos de tipo de datos
 
 ```java
+bool esVerdadero = 33 > 11;
 var entero = System.Int32;
 var defecto = default(entero); 
 object objeto = null;
@@ -39,8 +40,14 @@ long llave = 12000L;
 char caracter = '\u99877';
 Modelo modelo = new Modelo();
 var str = "juan".ToUpper();
-
 object obj = null;
+
+```
+
+## Obtener tipo de dato con GetType
+
+```java
+var tipo = System.Single;
 
  try
  {
@@ -52,7 +59,26 @@ catch(Exception ex)
     Console.WriteLine("Error = {0}",ex.Message);
 }
 
+
+var numero = 123;
+var tipo_ = numero.GetType();
+Console.WriteLine("{0}",tipo_);
+
+object[] tipos = {(int) 34, "Programando en C#", true, (long)12000, (sbyte) -3, };
+foreach(var tipo in tipos){
+  Type t = tipo.GetType();
+  
+  if (t.Equals(typeof(byte))){
+     Console.WriteLine("{0} es de tipo byte",tipo);
+  }
+  //...
+  
+}
+
 ```
+
+
+
 ## String en C#
 
 ```java
