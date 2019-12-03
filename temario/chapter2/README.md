@@ -83,7 +83,7 @@ for(int i=0; i < nombres.Count; i++)
 
 
 var numeros = new int[]{89,90,102,220,321,500,650,909};
-for(var numero in numeros)
+foreach(var numero in numeros)
 {
   Console.WriteLine("{0}",numero);
 }
