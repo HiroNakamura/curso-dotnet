@@ -32,11 +32,8 @@ namespace chapter1
             DateTime hoy = DateTime.Today;
             GetTipos(hoy);
             Console.WriteLine("----------------------------------------");
-<<<<<<< HEAD
             Operaciones();
-=======
             Imprimir();
->>>>>>> a5ca4bd96400155db308353c0b7553f3d5e8cdc3
         }
 
         static void GetTipos(object dato)
@@ -45,7 +42,6 @@ namespace chapter1
             Console.WriteLine("Tipo: {0}",dato.GetType());
         }
 
-<<<<<<< HEAD
         static void Operaciones()
         {
             bool verdadero = 12 > 3 && 45 >= 99;//false
@@ -58,12 +54,12 @@ namespace chapter1
             Console.WriteLine("{0}",verdadero);
             verdadero = !(100 <= 0 && -9 > 0);//true
             Console.WriteLine("{0}",verdadero);
-=======
+        }
+        
         static void Imprimir()
         {
            Console.WriteLine("Constante TAM:{0}", TAM);
-            Console.WriteLine("Constante MAX:{0}", MAX);
->>>>>>> a5ca4bd96400155db308353c0b7553f3d5e8cdc3
+           Console.WriteLine("Constante MAX:{0}", MAX);
         }
         
         static void Parametros(string[] datos)
