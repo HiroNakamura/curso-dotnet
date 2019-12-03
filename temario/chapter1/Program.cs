@@ -30,6 +30,8 @@ namespace chapter1
             GetTipos(entero32);
             DateTime hoy = DateTime.Today;
             GetTipos(hoy);
+            Console.WriteLine("----------------------------------------");
+            
         }
 
         static void GetTipos(object dato)
@@ -37,6 +39,8 @@ namespace chapter1
             Console.WriteLine("Dato: {0}",dato);
             Console.WriteLine("Tipo: {0}",dato.GetType());
         }
+
+        
         
         static void Parametros(string[] datos)
         {
