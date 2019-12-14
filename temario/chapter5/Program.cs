@@ -1,5 +1,6 @@
 ﻿using System;
 using clases;
+using interfaces;
 
 namespace chapter5
 {
@@ -9,6 +10,21 @@ namespace chapter5
         {
             MockTestA();
             MockTestB();
+            MockTestC();
+        }
+
+        static void MockTestC()
+        {
+           ServicioImplA serv = new ServicioImplA();
+           serv.Mensaje();
+           serv.Mensaje("Mariana");
+           bool verdadero = serv.Mensaje("X",'X');
+           if(verdadero == true)
+           {
+               Console.WriteLine("X y X son iguales");
+           }
+           int numero = serv.Mensaje('F');
+           Console.WriteLine("Numero: {0}",numero);
         }
 
         static void MockTestB()
