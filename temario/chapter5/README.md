@@ -2,8 +2,6 @@
 
 Crear clases derivadas de otras ya existentes.
 
-
-
 Ejemplo de herencia.
 
 ```java

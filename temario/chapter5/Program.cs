@@ -6,6 +6,10 @@ namespace chapter5
 {
     class Program
     {
+
+        public Program(){}
+
+        ~Program(){}
         static void Main(string[] args)
         {
             MockTestA();

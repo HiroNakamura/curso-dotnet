@@ -117,7 +117,8 @@ public struct Molde
      Nombre = nombre;
   }
   
-  public Molde(){}
+  //Esto daría error:
+  //public Molde(){}
   
   public string Nombre
   {
@@ -131,8 +132,10 @@ Instanciación.
 
 ```java
 var molde = new Molde("Rojo de ambar");
-var molde = new Molde();
+//Esto daría un error:
+//var molde = new Molde();
 molde.Nombre = "El chocolate es mejor en México";
+Console.WriteLine("{0}",molde.Nombre);
 ```
 
 
