@@ -57,9 +57,9 @@ namespace chapter1
                 Console.WriteLine("{0} es int: {1}",longitud, longitud.GetType());
             }
             
-            object obje = new object();
+            object obj = new object();
             var booleano = false;
-            if(obje is object)
+            if(obj is object)
             {
                 booleano = true;
             }
