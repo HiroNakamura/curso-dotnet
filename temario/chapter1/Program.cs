@@ -10,6 +10,7 @@ namespace chapter1
         
         static void Main(string[] args)
         {
+            EsTipo();
             TiposDeDatos();
             Parametros(args);
 
@@ -48,13 +49,38 @@ namespace chapter1
             
             if(cadena is string)
             {
-               Console.WriteLine("{0} es string",cadena);
+               Console.WriteLine("{0} es string: {1}",cadena,cadena.GetType());
             }
             
             if(longitud is int)
             {
-                Console.WriteLine("{0} es int",longitud);
+                Console.WriteLine("{0} es int: {1}",longitud, longitud.GetType());
             }
+            
+            object obje = new object();
+            var booleano = false;
+            if(obje is object)
+            {
+                booleano = true;
+            }
+            
+            Console.WriteLine("{0}",booleano);
+            Foo foo = obj as Foo;
+            if(foo != null)
+            {
+               if (obj is Foo)
+               {
+                   Foo foo = (Foo)obj;
+                   Console.WriteLine("{0} es {1}",foo, foo.GetType());
+               }
+            }
+            
+        }
+        
+        class Foo{
+           public Foo(){}
+           ~Foo(){}
+        
         }
 
         static string QuitarEspacios(string cadena)
