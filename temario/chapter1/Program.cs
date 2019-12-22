@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using clases;
 
 namespace chapter1
 {
@@ -10,7 +11,6 @@ namespace chapter1
         
         static void Main(string[] args)
         {
-            EsTipo();
             TiposDeDatos();
             Parametros(args);
 
@@ -40,7 +40,10 @@ namespace chapter1
             string espacios = QuitarEspacios("12 33 ");
             Console.WriteLine("Entrada = {0}",espacios);
             IntroduceDatos();
+            EsTipo();
         }
+
+        
         
         static void EsTipo()
         {
@@ -65,23 +68,29 @@ namespace chapter1
             }
             
             Console.WriteLine("{0}",booleano);
-            Foo foo = obj as Foo;
+            MyFoo foo = obj as MyFoo;
+            try
+            {
+                Console.WriteLine("{0} : {1}",foo,foo.GetType());
+            }catch(Exception ex)
+            {
+                Console.WriteLine("El error es:\n\t {0}",ex.Message);
+            }
+            
+
+
             if(foo != null)
             {
-               if (obj is Foo)
+               if (obj is MyFoo)
                {
-                   Foo foo = (Foo)obj;
-                   Console.WriteLine("{0} es {1}",foo, foo.GetType());
+                   MyFoo foo2 = (MyFoo)obj;
+                   Console.WriteLine("{0} es {1}",foo2, foo2.GetType());
                }
             }
             
         }
         
-        class Foo{
-           public Foo(){}
-           ~Foo(){}
         
-        }
 
         static string QuitarEspacios(string cadena)
         {
@@ -105,9 +114,20 @@ namespace chapter1
             Console.WriteLine("Introduce un otro numero:");
             int numero = Int32.Parse(QuitarEspacios(Console.ReadLine()));
             Console.WriteLine("Numero: {0}",numero);
-            Console.WriteLine("Introduce un valor booleano:");
-            bool booleano = Boolean.Parse(Console.ReadLine());
-            Console.WriteLine("Booeano: {0}",booleano);
+            try
+            {
+                Console.WriteLine("Introduce un valor booleano:");
+                bool booleano = Boolean.Parse(Console.ReadLine());
+                Console.WriteLine("Booleano: {0}",booleano);
+            }catch(Exception ex)
+            {
+                Console.WriteLine("El error es: \n\t{0}",ex.Message);
+            }finally
+            {
+                Console.WriteLine("Hecho!!");
+            }
+            
+            
         }
 
         static void GetTipos(object dato)
