@@ -69,6 +69,16 @@ namespace chapter1
             
             Console.WriteLine("{0}",booleano);
             MyFoo foo = obj as MyFoo;
+            
+            try
+            {   foo = new MyFoo();
+                foo.Nombre = "El general Arteaga.";
+                Console.WriteLine("{0}",foo);  
+            }catch(Exception ex)
+            {
+                Console.WriteLine("El error es:\n\t {0}",ex.Message);
+            }
+                   
             try
             {
                 Console.WriteLine("{0} : {1}",foo,foo.GetType());
@@ -76,8 +86,6 @@ namespace chapter1
             {
                 Console.WriteLine("El error es:\n\t {0}",ex.Message);
             }
-            
-
 
             if(foo != null)
             {
@@ -91,7 +99,6 @@ namespace chapter1
         }
         
         
-
         static string QuitarEspacios(string cadena)
         {
             string resultado = "";
