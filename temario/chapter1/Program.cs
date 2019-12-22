@@ -40,6 +40,22 @@ namespace chapter1
             Console.WriteLine("Entrada = {0}",espacios);
             IntroduceDatos();
         }
+        
+        static void EsTipo()
+        {
+            var cadena = "\nEl alcance de\n\tla gata comelona.".ToUpper();
+            var longitud = cadena.Length;
+            
+            if(cadena is string)
+            {
+               Console.WriteLine("{0} es string",cadena);
+            }
+            
+            if(longitud is int)
+            {
+                Console.WriteLine("{0} es int",longitud);
+            }
+        }
 
         static string QuitarEspacios(string cadena)
         {
