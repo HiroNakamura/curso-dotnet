@@ -32,8 +32,8 @@ Es un repositorio sobre el lenguaje de programación C#.
 ```java
 $ mkdir proyecto
 $ cd proyecto
-$ code .
 $ dotnet new console
+$ code .
 ```
 
 
